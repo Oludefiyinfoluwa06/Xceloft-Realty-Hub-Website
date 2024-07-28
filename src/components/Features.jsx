@@ -4,7 +4,7 @@ import feature3 from '../assets/feature-3.png';
 
 const Features = () => {
   return (
-    <section className="bg-gray-100 py-20 px-6">
+    <section id="features" className="bg-gray-100 py-20 px-6">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6 fade-in">Key Features</h2>
         <div className="space-y-16">

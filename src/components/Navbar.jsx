@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-scroll';
 import logo from '../assets/full-logo.png';
 import Button from './Button';
 
@@ -10,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white shadow-md fixed top-0 left-0 w-full">
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         <div>
             <img src={logo} alt="Logo" className="w-40" />
@@ -42,16 +43,32 @@ const Navbar = () => {
         <div className={`lg:flex items-center gap-4 ${isOpen ? 'absolute top-[90px] right-6 bg-white shadow-md p-5 rounded-lg space-y-6 block' : 'hidden'}`}>
           <ul className="flex flex-col lg:flex-row lg:space-x-6">
             <li className="mt-2 lg:mt-0">
-              <a href="#about" className="text-gray-700 hover:text-gray-900">About Us</a>
+              <Link
+                to="about"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer text-gray-700 hover:text-gray-900"
+                onClick={() => setIsOpen(false)}
+              >
+                About Us
+              </Link>
             </li>
             <li className="mt-2 lg:mt-0">
-              <a href="#features" className="text-gray-700 hover:text-gray-900">Features</a>
+              <Link
+                to="features"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer text-gray-700 hover:text-gray-900"
+                onClick={() => setIsOpen(false)}
+              >
+                Features
+              </Link>
             </li>
             <li className="mt-2 lg:mt-0">
-              <a href="#terms" className="text-gray-700 hover:text-gray-900">Terms & Conditions</a>
+              <a href="https://www.freeprivacypolicy.com/live/3e12d71d-1238-4cf3-a75a-b1266671deba" className="text-gray-700 hover:text-gray-900">Terms & Conditions</a>
             </li>
             <li className="mt-2 lg:mt-0">
-              <a href="#help" className="text-gray-700 hover:text-gray-900">Help Centre</a>
+              <a href="https://www.termsfeed.com/live/3ee0f5e0-c00b-4916-91ab-f5aba29eb386" className="text-gray-700 hover:text-gray-900">Privacy Policy</a>
             </li>
           </ul>
           <Button text='Get the app' />
