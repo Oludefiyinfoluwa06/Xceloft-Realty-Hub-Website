@@ -4,7 +4,7 @@ const Button = ({ text }) => {
         const fileUrl = '../assets/xrh.apk';
         const link = document.createElement('a');
         link.href = fileUrl;
-        link.download = 'Xceloft-Realty-Hub.apk';
+        link.download = 'xrh.apk';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
